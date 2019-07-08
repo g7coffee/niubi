@@ -8,7 +8,7 @@
     <Col :span="8"></Col>
     <Col :span="8">
       <Button type="success" shape="circle" class="head-button" style="width:140px;"
-        to="">
+        @click="toIssues('https://github.com/g7coffee/niubi/issues')">
         添加一碗
       </Button>
     </Col>
@@ -17,8 +17,10 @@
 
 <script>
 export default {
-  components: {
-
+  methods: {
+    toIssues(to) {
+      window.location.href = to
+    }
   }
 }
 </script>
